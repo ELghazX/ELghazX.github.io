@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <section class="section">
+        <!-- container kiri -->
+        <div class="container-kiri">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">
+                            <div class="logo">
+                                <img src="logo-resto.jpeg" alt="logo" />
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="menu-item">
+                                <img src="nasi-goreng.jpeg" alt="Nasi Goreng" />
+                                <h3>Nasi Goreng Spesial</h3>
+                                <p>Nasi goreng dan sayuran segar.</p>
+                                <p>Harga: Rp. 25.000</p>
+                                <input type="number" value="1" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="menu-item">
+                                <img src="es-teh-manis.jpeg" alt="Es Teh Manis" />
+                                <h3>Es Teh Manis</h3>
+                                <p>Semanis senyumannya.</p>
+                                <p>Harga: Rp. 25.000</p>
+                                <input type="number" value="1" />
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- container kanan -->
+        <div class="container-kanan">
+            <h3>Bukti Pemesanan</h3>
+            <div class="form-group">
+                <label for="pelayan">Nama Pelayan:</label>
+                <input type="text" id="order-id" value="Muhammad Ghazali" readonly />
+            </div>
+            <div class="form-group">
+                <label for="name">Nama Pemesan:</label>
+                <input type="text" value="Abdullah Azam" id="name" placeholder="Masukkan nama" />
+            </div>
+            <div class="form-group">
+                <label for="address">Alamat Pemesan:</label>
+                <input type="text" id="address" value ="Jl. Merdeka No. 15, Kota Balikpapan"  placeholder="Masukkan alamat"/>
+            </div>
+            <div class="form-group">
+                <label for="date">Tanggal Pemesanan:</label>
+                <input type="date" id="date" />
+            </div>
+            <div class="form-group">
+                <label for="notes">Catatan Tambahan:</label>
+                <textarea id="notes" placeholder="Masukkan catatan (opsional)"></textarea>
+            </div>
+            <div class="total"/>
+                <div class="total-data">
+                    <p><strong>Total Pesanan</strong></p>
+                    <p><strong>Pajak</strong></p>
+                    <p><strong>Total Tagihan</strong></p>
+                </div>
+                <div class="total-isi">
+                    <p>Rp. 30.000</p>
+                    <p>Rp. 2.000</p>
+                    <p>Rp. 32.000</p>
+                </div>
+            </div>
+            <div class="metode-pembayaran">
+                <input type="radio" name="metode-pembayaran" id="BCA">
+                <label for="BCA">Bank BCA</label>
+                <input type="radio" name="metode-pembayaran" id="BRI">
+                <label for="BRI">Bank BRI</label>
+                <input type="radio" name="metode-pembayaran" id="OVO">
+                <label for="OVO">OVO</label>
+                <input type="radio" name="metode-pembayaran" id="GOPAY">
+                <label for="GOPAY">GoPay</label>
+            </div>
+            <button class="confirm-btn">Konfirmasi Pesanan</button>
+        </div>
+        
+    </section>
+    
+    <footer>
+        Muhammad Ghazali<br>
+        2309106041<br>
+        Praktikum Web:  <a href="https://classroom.google.com/c/NzEwMjM0NDcyMzE3/a/NzA2MTI5NDQ3Nzg5/details">Posttest 2</a>
+    </footer>
+</body>
+</html>
