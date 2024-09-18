@@ -8,11 +8,7 @@
         width: 100%;
     }
 }
-@media (max-width: 768px) {
-    .menu-item input {
-        width: 100%; 
-    }
-}
+
 .menu-item input{
     color: #351c1a;
     width: 1.5em;
