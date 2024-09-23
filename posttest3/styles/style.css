@@ -1,0 +1,332 @@
+:root {
+    --base-color: #414340;
+    --second-color: rgb(40, 41, 39);
+    --nav-color: rgba(40, 41, 39, 0.8);
+    --accent-color: #46ac96;
+    --accent-color2: #5296ad;
+    --putih: #f5f5f5;
+}
+
+.light-mode {
+    --base-color: #f0f0f0;
+    --second-color: #ffffff;
+    --nav-color: rgba(255, 255, 255, 0.8);
+    --accent-color: #46ac96;
+    --accent-color2: #5296ad;
+    --putih: #242424;
+}
+
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--base-color);
+    color: var(--putih);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: var(--nav-color);
+    border-bottom: 1px solid var(--accent-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.navbar .navbar-logo span {
+    color: var(--accent-color2);
+    font-style: italic;
+}
+
+.navbar .navbar-nav a {
+    color: var(--putih);
+    display: inline-block;
+    font-size: 1.4rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--accent-color);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--accent-color);
+    transform: scaleX(0);
+    transition: transform 0.2s ease;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color: var(--putih);
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+    color: var(--accent-color);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+/* ganti tema */
+#tema-change {
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-color);
+    align-items: center;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+}
+
+#tema-change svg:last-child {
+    display: none;
+}
+
+.light-mode #tema-change svg:first-child {
+    display: none;
+}
+
+.light-mode #tema-change svg:last-child {
+    display: block;
+    justify-content: center;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-color: var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.hero .content {
+    max-width: 800px;
+}
+.hero .content img {
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--putih);
+}
+
+.hero p {
+    font-size: 1.8rem;
+    color: var(--putih);
+    margin-top: 1rem;
+}
+
+/* Services Section */
+.services {
+    padding: 5rem 7%;
+    background-color: var(--base-color);
+    color: var(--putih);
+}
+
+.services h2 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.service-item {
+    margin-bottom: 2rem;
+}
+
+.service-item h3 {
+    font-size: 2rem;
+    color: var(--accent-color2);
+}
+
+.service-item p {
+    font-size: 1.6rem;
+    color: var(--putih);
+    margin-top: 0.5rem;
+}
+
+/* pesan Section */
+#pesan {
+    padding: 5rem 7%;
+    background-color: var(--second-color);
+    color: var(--putih);
+    text-align: center;
+}
+
+#pesan h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+#pesan p {
+    font-size: 1.8rem;
+}
+
+/* About Section */
+#about {
+    padding: 5rem 7%;
+    background-color: var(--base-color);
+    color: var(--putih);
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+#about p {
+    font-size: 1.8rem;
+}
+#about ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Media Queries */
+@media (max-width: 1366px) {
+    html {
+        font-size: 75%;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: var(--second-color);
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s ease;
+    }
+
+    .navbar .navbar-nav.active {
+        right: 0;
+    }
+
+    .navbar .navbar-nav a {
+        color: var(--putih);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5px;
+        font-size: 2rem;
+    }
+
+    .navbar .navbar-nav a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after {
+        transform: scale(0.5);
+    }
+
+    .navbar .navbar-extra {
+        display: flex;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
+/* Pilihan Joki Section */
+.pilihan-joki {
+    padding: 5rem 7%;
+    background-color: var(--base-color);
+    color: var(--putih);
+    text-align: center;
+}
+
+.pilihan-joki h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    color: var(--accent-color);
+}
+
+.joki-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.joki-card {
+    background-color: var(--second-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.joki-card h3 {
+    font-size: 2rem;
+    color: var(--accent-color2);
+    margin-bottom: 1rem;
+}
+
+.joki-card p {
+    font-size: 1.4rem;
+    color: var(--putih);
+}
+
+.joki-card:hover {
+    transform: translateY(-10px);
+    background-color: var(--nav-color);
+}
+
+#footer {
+    padding: 2rem 7%;
+    background-color: var(--nav-color);
+    color: var(--putih);
+    text-align: center;
+    
+}
+#footer p {
+    font-size: 1.4rem;
+}
