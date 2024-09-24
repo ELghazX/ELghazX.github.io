@@ -15,7 +15,6 @@ const temaChange = document.getElementById('tema-change');
 
 temaChange.addEventListener('click', () => {
     lightMode !== 'active' ? enableLightMode() : disableLightMode();
-    alert("Tema berubah");
 });
 
 const enableLightMode = () => {
